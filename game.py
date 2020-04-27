@@ -10,15 +10,16 @@ game = [[0, 0, 0],
 
 
 #function
-def game_board():
-    #loop through matrix and count left column
+def game_board(player=0, row=0, column=0, just_display=False):
+    #print top row numbers
+    print("   a  b  c")
+    if not just_display:
+        game[row][column] = player
+
+    #loop through matrix
     for count, row in enumerate(game):
-        if (count == 1):
-            game[1][0] = 1
         print(count, row)
 
 
-#print top row numbers
-print("   a  b  c")
-
-game_board()
+game_board(just_display=True)
+game_board(player=1, row=1, column=1)
