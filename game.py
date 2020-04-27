@@ -1,7 +1,6 @@
-print ("hello")
+game = [[0, 0, 0],
+       [0, 0, 0],
+       [0, 0, 0]]
 
-programming_languages = "Python", "Java", "C++", "C#"
-
-
-for language in programming_languages:
-    print(language)
+for row in game:
+    print(row)
