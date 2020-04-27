@@ -7,10 +7,18 @@
 game = [[0, 0, 0],
        [0, 0, 0],
        [0, 0, 0]]
-       
+
+
+#function
+def game_board():
+    #loop through matrix and count left column
+    for count, row in enumerate(game):
+        if (count == 1):
+            game[1][0] = 1
+        print(count, row)
+
+
 #print top row numbers
 print("   a  b  c")
 
-#loop through matrix and count left column
-for count, row in enumerate(game):
-    print(count, row)
+game_board()
