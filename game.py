@@ -4,9 +4,9 @@
 '''
 
 #matrix
-game = [[0, 0, 0],
-       [0, 0, 0],
-       [0, 0, 0]]
+game = [[2, 0, 0],
+       [0, 2, 0],
+       [0, 0, 2]]
 '''
 You can win:
 horizontally
@@ -14,8 +14,32 @@ vertically
 diagonally
 '''
 
+cols = list(reversed(range(len(game))))
+rows = range(len(game))
 
+diags = []
+for col, row in enumerate(reversed(range(len(game)))):
+    diags.append(game[row][col])
+
+diags = []
+for ix in range(len(game)):
+    diags.append(game[ix][ix])
+
+print(diags)
+
+
+if game[0][0] == game[1][1] == game[2][2]:
+    print("winner")
+
+
+
+if game[2][0] == game[1][1] == game[0][2]:
+    print("winner")
+
+
+'''
 columns = [0, 1, 2]
+
 
 for col in range(len(game)):
     check = []
@@ -37,6 +61,7 @@ def win(current_game):
 
 
 win(game)
+'''
 
 #function
 def game_board(game_map, player=0, row=0, column=0, just_display=False):
