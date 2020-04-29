@@ -7,7 +7,23 @@
 game = [[0, 0, 0],
        [0, 0, 0],
        [0, 0, 0]]
+'''
+You can win:
+horizontally
+vertically
+diagonally
+'''
 
+def win(current_game):
+    for row in game:
+        print(row)
+
+        all_match = True
+        if row.count(row[0]) == len(row) and row[0] != 0:
+            print("Winner")
+
+
+win(game)
 
 #function
 def game_board(game_map, player=0, row=0, column=0, just_display=False):
