@@ -14,6 +14,19 @@ vertically
 diagonally
 '''
 
+
+columns = [0, 1, 2]
+
+for col in range(len(game)):
+    check = []
+
+    for row in game:
+        print(row[0])
+        check.append(row[col])
+
+    if row.count(check[0]) == len(row) and row[0] != 0:
+        print("Winner")
+
 def win(current_game):
     for row in game:
         print(row)
